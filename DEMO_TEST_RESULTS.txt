@@ -1,0 +1,25 @@
+Simulation results (not a trained ML model):
+Expected: Phishing   Predicted: Phishing
+Expected: Phishing   Predicted: Phishing
+Expected: Phishing   Predicted: Phishing
+Expected: Phishing   Predicted: Phishing
+Expected: Phishing   Predicted: Phishing
+Expected: Legitimate Predicted: Legitimate
+Expected: Legitimate Predicted: Legitimate
+Expected: Legitimate Predicted: Legitimate
+Expected: Legitimate Predicted: Legitimate
+Expected: Legitimate Predicted: Legitimate
+Prediction counts: {'Phishing': 5, 'Review': 0, 'Legitimate': 5}
+{
+  "samples": 10,
+  "TP": 5,
+  "FP": 0,
+  "TN": 5,
+  "FN": 0,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0
+}
+
+IMPORTANT: Ten synthetic records, not a trained model or held-out CEAS_08 evaluation.

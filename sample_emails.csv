@@ -1,0 +1,11 @@
+sender,subject,body,expected
+security@example-notices.com,Urgent verify your account,Click here to confirm your identity at https://example.invalid,Phishing
+accounts@example-notices.com,Account suspended,Login immediately to avoid account suspended status,Phishing
+finance@example-notices.com,Wire transfer request,Urgent wire transfer needed today,Phishing
+rewards@example-notices.com,Claim your prize,Act now and click here for a prize,Phishing
+admin@example-notices.com,Security alert,Verify your account and password now,Phishing
+professor@university.edu,Class schedule,Our lecture starts at ten tomorrow,Legitimate
+coach@university.edu,Practice update,Practice will begin at four today,Legitimate
+library@university.edu,Book reminder,The requested reading is available,Legitimate
+staff@university.edu,Meeting notes,Please see the attached agenda for our meeting,Legitimate
+team@university.edu,Project check in,We will review the design on Friday,Legitimate
