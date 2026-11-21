@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+predictions.db
+phishing_model.joblib
+training_emails.csv
