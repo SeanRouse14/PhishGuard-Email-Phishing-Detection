@@ -19,3 +19,23 @@ The examples are artificial and deliberately simple. Reported testbed metrics **
 - `prototype.py`: runnable CLI testbed
 - `sample_emails.csv`: labeled illustrative test data
 - `predictions.db`: automatically created on first run
+
+## Running the Web Interface
+
+The project also includes a Flask webpage that allows users to check emails without using the command line.
+
+### How to Run
+
+1. Download the repository and open the project folder.
+2. Install the required packages using `python -m pip install -r requirements.txt`.
+3. Start the application using `python app.py`.
+4. Open `http://127.0.0.1:5000` in your browser.
+5. Enter the sender, subject, and email body, then click **Analyze Email**.
+
+### Expected Output
+
+The webpage displays whether an email is classified as Phishing, Legitimate, or Review. It also shows a risk score and explains which suspicious phrases were detected.
+
+For example, an artificial email containing “urgent,” “verify your account,” and “click here” was classified as Phishing with a rule-based risk score of 7.
+
+The webpage is a local demonstration and does not access live email accounts. The risk score is not a phishing probability.
