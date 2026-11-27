@@ -482,67 +482,6 @@
                 {% endif %}
             </div>
         </section>
-
-        <section class="card history-card">
-            <h2>Recent Scan History</h2>
-
-            {% if history and history|length > 0 %}
-                <div class="history-list">
-                    {% for item in history %}
-                        {% set item_label = (item.get('label') or 'Review') %}
-                        {% set item_class = item_label|lower %}
-                        <div class="history-item">
-                            <div class="history-top">
-                                <div>
-                                    <div class="history-title">{{ item.get('subject', 'No Subject') }}</div>
-                                    <div class="meta">
-                                        Sender: {{ item.get('sender', 'Unknown') }}
-                                        {% if item.get('created_at') %}
-                                            • {{ item.get('created_at') }}
-                                        {% endif %}
-                                    </div>
-                                </div>
-                                <span class="history-pill {{ item_class }}">{{ item_label }}</span>
-                            </div>
-
-                            <div class="history-body">
-                                <div><strong>Prediction ID:</strong> {{ item.get('id', 'N/A') }}</div>
-                                <div><strong>Score:</strong> {{ item.get('score', 'N/A') }}</div>
-                                <div><strong>Explanation:</strong> {{ item.get('explanation', 'No explanation available') }}</div>
-                            </div>
-
-                            {% if item.get('feedback') %}
-                                <div class="feedback-tag"><strong>Saved feedback:</strong> {{ item.get('feedback') }}</div>
-                            {% endif %}
-
-                            <div class="history-actions">
-                                <span class="meta">Submit feedback:</span>
-
-                                <form method="POST" action="/feedback/{{ item.get('id') }}" class="inline-form">
-                                    <input type="hidden" name="label" value="Phishing">
-                                    <button type="submit" class="secondary-btn">Mark as Phishing</button>
-                                </form>
-
-                                <form method="POST" action="/feedback/{{ item.get('id') }}" class="inline-form">
-                                    <input type="hidden" name="label" value="Legitimate">
-                                    <button type="submit" class="secondary-btn">Mark as Legitimate</button>
-                                </form>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <p class="empty-state">
-                    No scan history is available yet. Once emails are analyzed, they will appear here.
-                </p>
-            {% endif %}
-
-            <p class="footer-note">
-                This interface is a class prototype. Feedback is stored for review in the database,
-                but it does not automatically retrain the model.
-            </p>
-        </section>
-
     </div>
 </body>
 </html>
